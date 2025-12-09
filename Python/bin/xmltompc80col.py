@@ -36,7 +36,8 @@ def processDataElement(first, element):
       if childtext:      # add to dict if child has text -- this excludes localUse
                          # because localUse has no text
          subDict[1][childtag] = childtext
- 
+         
+   # add the first "astCat" entry as the "NET" value in the header
    if first:
      sline = "NET "+subDict[1]['astCat']
      print(sline, file= encodedout)
